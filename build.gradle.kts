@@ -12,7 +12,7 @@ plugins {
     `maven-publish`
 }
 group = "fei.upload.apk"
-version = "1.0.0"
+version = "1.0.3"
 
 dependencies {
     testImplementation(kotlin("test"))
