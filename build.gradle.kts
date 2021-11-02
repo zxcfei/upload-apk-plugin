@@ -6,16 +6,10 @@ repositories {
     maven("https://jitpack.io")
     mavenCentral()
 }
-buildscript {
-    dependencies {
-        classpath("com.github.dcendents:android-maven-gradle-plugin:2.1")
-    }
-}
 plugins {
     kotlin("jvm") version "1.5.10"
-    application
     `kotlin-dsl`
-    "com.github.dcendents.android-maven"
+    `maven-publish`
 }
 group = "fei.upload.apk"
 version = "1.0.0"
@@ -32,8 +26,4 @@ tasks.test {
 
 tasks.withType<KotlinCompile>() {
     kotlinOptions.jvmTarget = "1.8"
-}
-
-application {
-
 }
