@@ -1,19 +1,24 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
+repositories {
+    maven("https://maven.aliyun.com/repository/google")
+    maven("https://maven.aliyun.com/repository/public")
+    maven("https://jitpack.io")
+    mavenCentral()
+}
+buildscript {
+    dependencies {
+        classpath("com.github.dcendents:android-maven-gradle-plugin:2.1")
+    }
+}
 plugins {
     kotlin("jvm") version "1.5.10"
     application
     `kotlin-dsl`
+    "com.github.dcendents.android-maven"
 }
-
 group = "fei.upload.apk"
 version = "1.0.0"
-
-repositories {
-    maven("https://maven.aliyun.com/repository/google")
-    maven("https://maven.aliyun.com/repository/public")
-    mavenCentral()
-}
 
 dependencies {
     testImplementation(kotlin("test"))
